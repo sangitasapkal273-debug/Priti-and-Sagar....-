@@ -1,0 +1,115 @@
+# Priti-and-Sagar....-
+Wedding of Priti and Sagar 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Wedding | Save the Date</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #d4a373; /* Champagne/Gold */
+            --text-color: #333;
+            --bg-color: #fefae0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        header {
+            padding: 100px 20px;
+            background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), 
+                        url('https://unsplash.com');
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .details-section {
+            padding: 50px 20px;
+        }
+
+        .rsvp-form {
+            background: white;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #bc8a5f;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Alex & Taylor</h1>
+        <p style="font-size: 1.5rem; letter-spacing: 2px;">ARE GETTING MARRIED</p>
+        <p>September 24, 2026 • Santa Barbara, CA</p>
+    </header>
+
+    <section class="details-section">
+        <h2>The Big Day</h2>
+        <p><strong>Ceremony:</strong> 4:00 PM at The Rose Garden</p>
+        <p><strong>Reception:</strong> 6:00 PM at Oceanview Hall</p>
+    </section>
+
+    <section class="rsvp-section">
+        <h2>Will You Attend?</h2>
+        <div class="rsvp-form">
+            <form id="weddingRSVP">
+                <input type="text" placeholder="Full Name" required>
+                <select required>
+                    <option value="" disabled selected>Will you attend?</option>
+                    <option value="yes">Joyfully Accept</option>
+                    <option value="no">Regretfully Decline</option>
+                </select>
+                <input type="number" placeholder="Number of Guests" min="1" max="5">
+                <button type="submit">Send RSVP</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('weddingRSVP').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! Your RSVP has been sent.');
+        });
+    </script>
+
+</body>
+</html>
